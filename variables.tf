@@ -18,6 +18,11 @@ variable "instance_ami" {
   default     = "ami-052efd3df9dad4825"
 }
 
+variable "instance_user_data" {
+  description = "Init script user_data"
+  default     = ""
+}
+
 /*
 Free Tiers for N. Virginia
 
