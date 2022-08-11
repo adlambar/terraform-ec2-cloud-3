@@ -31,7 +31,7 @@ resource "aws_instance" "instance" {
 }
 
 resource "aws_security_group" "instances" {
-  name = "instance-sg"
+  name = "instance-sg-2"
   ingress {
     from_port   = 22
     to_port     = 22
