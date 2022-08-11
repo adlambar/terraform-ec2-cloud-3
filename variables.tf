@@ -20,7 +20,7 @@ variable "instance_ami" {
 
 variable "instance_user_data" {
   description = "Init script user_data"
-  default     = ""
+  default     = "init-script.sh"
 }
 
 /*
