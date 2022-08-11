@@ -1,12 +1,12 @@
 terraform {
 
-  cloud {
-    organization = "org-adlambar"
+  # cloud {
+  #   organization = "org-adlambar"
 
-    workspaces {
-      name = "terraform-ec2-cloud"
-    }
-  }
+  #   workspaces {
+  #     name = "terraform-ec2-cloud"
+  #   }
+  # }
 
   required_providers {
     aws = {
