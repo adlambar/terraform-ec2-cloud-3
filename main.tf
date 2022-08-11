@@ -18,9 +18,9 @@ data "aws_ami" "ubuntu" {
   owners = ["099720109477"] # Canonical
 }
 
-resource "aws_instance" "ubuntu" {
+resource "aws_instance" "instance" {
   #ami           = data.aws_ami.ubuntu.id
-  ami = "ami-052efd3df9dad4825"
+  ami = var.instance_ami
   instance_type = var.instance_type
   key_name = "ec2_keypair"
   vpc_security_group_ids = [aws_security_group.instances.id]

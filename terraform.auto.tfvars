@@ -1,1 +1,2 @@
-instance_name = "ubuntu_github_2_rename"
+instance_name = "redhat"
+instance_ami  = "ami-06640050dc3f556bb"
