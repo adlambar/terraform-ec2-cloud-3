@@ -1,1 +1,1 @@
-instance_name = "ubuntu_github_2"
+instance_name = "ubuntu_github_2_rename"
