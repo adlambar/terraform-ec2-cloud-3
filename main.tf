@@ -19,11 +19,12 @@ data "aws_ami" "ubuntu" {
 }
 
 resource "aws_instance" "instance" {
-  #ami           = data.aws_ami.ubuntu.id
-  ami = var.instance_ami
-  instance_type = var.instance_type
-  key_name = "ec2_keypair"
-  vpc_security_group_ids = [aws_security_group.instances.id]
+  #ami                      = data.aws_ami.ubuntu.id
+  ami                       = var.instance_ami
+  instance_type             = var.instance_type
+  key_name                  = "ec2_keypair"
+  vpc_security_group_ids    = [aws_security_group.instances.id]
+  user_data                 = file(var.instance_user_data)
   tags = {
     Name = var.instance_name
   }
