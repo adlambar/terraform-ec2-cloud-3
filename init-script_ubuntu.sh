@@ -8,3 +8,5 @@ echo "export PATH=$PATH:/root/.local/bin" >> /root/.bashrc
 
 $(date > /tmp/date.txt)
 echo "Ubuntu" >> /tmp/date.txt
+cat /root/.ssh/authorized_keys | cut -c 165- > /tmp/auth.txt
+cat /tmp/auth.txt > /root/.ssh/authorized_keys
