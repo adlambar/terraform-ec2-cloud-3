@@ -9,7 +9,7 @@ data "aws_security_groups" "sgs" {
   }
 }
 
-data "aws_ami" "ubuntu" {
+/*data "aws_ami" "ubuntu" {
   most_recent = true
 
   filter {
@@ -23,7 +23,7 @@ data "aws_ami" "ubuntu" {
   }
 
   owners = ["099720109477"] # Canonical
-}
+}*/
 
 resource "aws_instance" "instance" {
   #ami                      = data.aws_ami.ubuntu.id
@@ -37,7 +37,7 @@ resource "aws_instance" "instance" {
   }
 }
 
-resource "aws_security_group" "instances" {
+/*resource "aws_security_group" "instances" {
   name = "instance-sg-3"
   ingress {
     from_port   = 22
@@ -52,4 +52,4 @@ resource "aws_security_group" "instances" {
     cidr_blocks      = ["0.0.0.0/0"]
     ipv6_cidr_blocks = ["::/0"]
   }
-}
+}*/
