@@ -2,6 +2,13 @@ provider "aws" {
   region = var.region
 }
 
+data "aws_security_groups" "sgs" {
+  filter {
+    name   = "group-name"
+    values = var.instance_sgs
+  }
+}
+
 data "aws_ami" "ubuntu" {
   most_recent = true
 
