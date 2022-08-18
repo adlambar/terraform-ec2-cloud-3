@@ -23,6 +23,11 @@ variable "instance_user_data" {
   default     = "init-script.sh"
 }
 
+variable "instance_sgs" {
+  description = "Security Groups"
+  default     = "general"
+}
+
 /*
 Free Tiers for N. Virginia
 
