@@ -21,7 +21,3 @@ output "instance_name" {
 output "sgs_ids" { 
   value = data.aws_security_groups.sgs.ids  
 }
-
-output "sgs_arns" {   
-  value = data.aws_security_groups.sgs.arns
-}
