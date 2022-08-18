@@ -17,3 +17,8 @@ output "instance_public_ip" {
 output "instance_name" { 
   value = "${lookup(aws_instance.instance.tags, "Name")}"
 }
+
+output "sgs" { 
+  value = data.aws_security_groups.sgs.ids
+  value = data.aws_security_groups.sgs.arns
+}
