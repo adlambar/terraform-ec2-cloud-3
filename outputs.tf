@@ -18,7 +18,10 @@ output "instance_name" {
   value = "${lookup(aws_instance.instance.tags, "Name")}"
 }
 
-output "sgs" { 
-  value = data.aws_security_groups.sgs.ids
+output "sgs_ids" { 
+  value = data.aws_security_groups.sgs.ids  
+}
+
+output "sgs_arns" {   
   value = data.aws_security_groups.sgs.arns
 }
