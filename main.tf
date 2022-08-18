@@ -5,7 +5,7 @@ provider "aws" {
 data "aws_security_groups" "sgs" {
   filter {
     name   = "group-name"
-    values = var.instance_sgs
+    values = [var.instance_sgs]
   }
 }
 
